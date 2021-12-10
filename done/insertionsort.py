@@ -10,5 +10,5 @@ def insertionsort(list_1):
     return list_1        
             
 
-x = [1, 4, 6, 2, 8, 3, 4 , 7 , 10 , 9, 34, 2, 3, 5, 8, ]
+x = [1, 4, 6, 2, 8, 3, 4 , 7 , 10 , 9, 34, 2, 3, 5, 8,50,0 ]
 print(insertionsort(x))

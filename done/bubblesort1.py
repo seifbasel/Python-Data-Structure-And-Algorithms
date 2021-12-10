@@ -8,5 +8,5 @@ def bubblesort(list_1):
                 list_1[i], list_1[i+1] = list_1[i+1],list_1[i]
     return list_1            
         
-x=[9,8,7,6,5,4,65,10,63,87,33,2,1]
+x=[9,8,12,7,6,5,4,65,10,63,87,33,2,1]
 print(bubblesort(x))
