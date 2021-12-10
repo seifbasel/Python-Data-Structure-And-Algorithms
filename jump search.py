@@ -1,20 +1,18 @@
 import math
 
-def search(numbers, target):
-    size = len(numbers)
-    block_size = math.floor(math.sqrt(size))
-    end = block_size
+def search(list, target):
+    size = len(list)
+    jump_value = math.floor(math.sqrt(size))
+    end = jump_value
     start = 0
         
-    while end < size and numbers[end] <= target:
+    while end < size and list[end] <= target:
         start = end
-        end += block_size
+        end += jump_value
         new_end = min(end, size)
     for i in range(start, new_end):
-                if numbers[i] == target:
+                if list[i] == target:
                     return True
             
                 return False
-
-
 
