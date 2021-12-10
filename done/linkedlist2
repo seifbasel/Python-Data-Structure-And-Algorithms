@@ -1,0 +1,40 @@
+class node:
+    def __init__(self,data):
+        self.data_val=data
+        self.next=None
+        
+class linkedlist:
+    def __init__(self):
+        self.head=None
+    
+    def add(self,data):
+        newnode=node(data)
+        newnode.next=self.head
+        self.head=newnode
+    
+    def show(self):
+        node=self.head
+        while node!= None:
+            print(node.data_val)
+            node=node.next
+    
+    def search(self,data):
+        currentnode=self.head
+        while currentnode!=None:
+            if currentnode.data_val==data:
+                return True
+            currentnode=currentnode.next
+        return False
+    
+        
+list_1 = linkedlist()
+list_1.add(1)
+list_1.add(2)
+list_1.add(3)
+list_1.add(4)
+list_1.add(7)
+list_1.add(8)
+list_1.show()
+print(list_1.search(2))
+
+

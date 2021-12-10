@@ -37,7 +37,6 @@ list_1.add(1)
 list_1.add(2)
 list_1.add(3)
 list_1.add(4)
-
 list_1.show()
 
 if list_1.search(4):

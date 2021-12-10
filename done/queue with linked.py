@@ -1,21 +1,23 @@
-class Queue:
-
- class Node:
+class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
 
+class Queue:
     def __init__(self):
         self.head = None
         self.tail = None
 
+    def isEmpty(self):
+        return self.head == None
+    
     def enqueue(self, data):
         if self.head == None:
-            node = self.Node(data)
+            node = Node(data)
             self.head = node
             self.tail = self.head
         else:
-            node = self.Node(data)
+            node =Node(data)
             self.tail.next = node
             self.tail = node
 
@@ -31,3 +33,20 @@ class Queue:
         while current != None:
             print(current.data, end=" ")
             current = current.next
+
+
+q = Queue()
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+q.enqueue(40)
+q.enqueue(50)
+q.enqueue(60)
+q.enqueue(70)
+q.dequeue()
+q.dequeue()
+q.dequeue()
+q.display()
+print(q.isEmpty())
+print("Queue Front " + str(q.head.data))
+print("Queue Rear " + str(q.tail.data))

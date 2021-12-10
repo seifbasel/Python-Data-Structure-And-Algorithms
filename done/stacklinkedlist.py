@@ -35,6 +35,7 @@ class Stack:
             popped=self.head.data
             self.head=self.head.next
             return popped
+
 def main():
     l = Stack()
     print('1.push\n2.pop\n3.exit')
