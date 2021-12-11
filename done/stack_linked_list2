@@ -18,51 +18,17 @@ class stack:
         if self.head == None:
             return None
         else:
-            while self.head != None:
-                popped = self.head.dataval
-                self.head=self.head.next
-                return popped
+            popped = self.head
+            self.head=self.head.next
+            return popped
 
     def display(self):
         node = self.head
         while node != None:
             print(node.dataval)
             node = node.next
-            
-
-class node:
-    def __init__(self, data):
-        self.dataval = data
-        self.next = None
-
-
-class stack:
-    def __init__(self):
-        self.head = None
-
-    def push(self, data):
-        if self.head == None:
-            self.head = node(data)
         else:
-            newnode = node(data)
-            newnode.next = self.head
-            self.head = newnode
-
-    def pop(self):
-        if self.head == None:
-            return None
-        else:
-            while self.head != None:
-                popped = self.head.dataval
-                self.head = self.head.next
-                return popped
-
-    def display(self):
-        node = self.head
-        while node != None:
-            print(node.dataval)
-            node = node.next
-
+            print("stack")
 
 a_stack = stack()
 a_stack.push(1)
