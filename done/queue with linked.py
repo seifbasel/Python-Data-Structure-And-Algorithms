@@ -31,7 +31,7 @@ class Queue:
     def display(self):
         current = self.head
         while current != None:
-            print(current.data, end=" ")
+            print(current.data, "\n ")
             current = current.next
 
 

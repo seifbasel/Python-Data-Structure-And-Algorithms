@@ -36,6 +36,14 @@ class Stack:
             self.head=self.head.next
             return popped
 
+    def search(self, search_value):
+        node = self.head
+        while node != None:
+            if node.data == search_value:
+                return True
+            node = node.next
+        return False
+    
 def main():
     l = Stack()
     print('1.push\n2.pop\n3.exit')
