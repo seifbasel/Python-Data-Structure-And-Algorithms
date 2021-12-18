@@ -26,7 +26,7 @@ class node:
         print(self.data),
         if self.right:
             self.right.PrintTree()
-
+            print(self.data)
 
 root=node(0)
 root.insert(1)

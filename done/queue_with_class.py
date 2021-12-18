@@ -3,7 +3,6 @@ class queue:
         self.queue=[]
     
     def add(self,value):
-        self.value=value
         self.queue.append(value)
     
     def show(self):
