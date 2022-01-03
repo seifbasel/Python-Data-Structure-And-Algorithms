@@ -1,5 +1,4 @@
-# Python3 program to find singles in a given binary tree
- 
+
 # A Binary Tree Node
 class Node:
      
@@ -35,7 +34,6 @@ def printSingles(root):
         print (root.left.key)
         printSingles(root.left)
  
-# Driver program to test above function
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
@@ -43,4 +41,3 @@ root.left.right = Node(4)
 root.right.left = Node(5)
 root.right.left.left = Node(6)
 printSingles(root)
- 

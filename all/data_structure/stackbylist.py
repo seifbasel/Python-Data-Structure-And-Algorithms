@@ -1,5 +1,4 @@
-from collections import deque
-list_1= deque()
+list_1= []
 list_1.append(2)
 list_1.append(4)
 list_1.append(5)

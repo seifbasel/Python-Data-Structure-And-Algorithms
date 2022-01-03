@@ -29,6 +29,14 @@ class stack:
             node = node.next
         else:
             print("stack")
+    
+    def search(self, search_value):
+        node = self.head
+        while node != None:
+            if node.dataval == search_value:
+                return True
+            node = node.next
+        return False
 
 a_stack = stack()
 a_stack.push(1)
@@ -40,3 +48,4 @@ a_stack.pop()
 a_stack.pop()
 a_stack.pop()
 a_stack.display()
+print(a_stack.search(4))
