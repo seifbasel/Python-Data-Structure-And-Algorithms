@@ -1,7 +1,6 @@
-
 class TreeNode:
-    def __init__(self, val):
-        self.key = val
+    def __init__(self, data):
+        self.data = data
         self.left = None
         self.right = None
         
@@ -15,11 +14,11 @@ def printsingles(root):
         printsingles(root.right)
         
     elif root.right is not None:
-        print(root.right.key)
+        print(root.right.data)
         printsingles(root.right)
         
     elif root.left is not None:
-        print(root.left.key)
+        print(root.left.data)
         printsingles(root.left)
         
         
