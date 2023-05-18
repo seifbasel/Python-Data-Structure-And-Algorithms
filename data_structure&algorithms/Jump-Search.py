@@ -1,6 +1,5 @@
 import math
 
-
 def jump_search_2(arr, search):
 
     jump = int(math.sqrt(len(arr)))
@@ -18,7 +17,6 @@ def jump_search_2(arr, search):
     if l_index[0]:
         return low+l_index[0]
     return "Not Found"
-
 
 arr = [i for i in range(1, 300)]
 res = jump_search_2(arr, 16)
