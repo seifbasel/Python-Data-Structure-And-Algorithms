@@ -1,21 +1,28 @@
-def quick_sort(list):
-    length=len(list)
-    if length <= 1:
-        return list
-    else:
-        pivot=list.pop()
-    item_greater=[]
-    item_lower = []
-
-    for item in list:
-        if item > pivot:
-            item_greater.append(item)
-        else:
-                item_lower.append(item)
+def quick_sort(lst):
+    length = len(lst)
     
-    return quick_sort(item_lower)+ [pivot]+quick_sort(item_greater)
+    # Base case: if the list has 1 or fewer elements, it is already sorted
+    if length <= 1:
+        return lst
+    else:
+        # Choose the pivot element as the last element in the list
+        pivot = lst.pop()
+        
+        # Initialize two lists to hold elements greater and lower than the pivot
+        items_greater = []
+        items_lower = []
 
+        # Iterate through the list and partition elements based on the pivot
+        for item in lst:
+            if item > pivot:
+                items_greater.append(item)
+            else:
+                items_lower.append(item)
 
+        # Recursively apply quick_sort to the lower elements, concatenate with the pivot,
+        # and then concatenate with the sorted greater elements
+        return quick_sort(items_lower) + [pivot] + quick_sort(items_greater)
+
+# Example usage
 x = [9, 8, 12, 7, 6, 5, 4, 65, 10, 63, 87, 33, 2, 1]
 print(quick_sort(x))
-
